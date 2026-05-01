@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上海外滩游船</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #f5f3f0 0%, #e8dfd8 50%, #ddd4cc 100%);
+      min-height: 100vh;
+      color: #5a5a5a;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .top-section {
+      background: linear-gradient(135deg, #f0e5d8 0%, #e6d7ce 100%);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #6b7280;
+      box-shadow: 0 10px 30px rgba(200, 180, 160, 0.2);
+      border: 1px solid rgba(200, 170, 140, 0.3);
+    }
+    .top-section h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .top-section .price {
+      font-size: 4em;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .top-section .price span {
+      font-size: 0.4em;
+    }
+    .top-section .contact {
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 2px dashed rgba(26,26,46,0.3);
+    }
+    .top-section .contact h3 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+    .top-section .contact .phone {
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255, 245, 240, 0.6);
+      border-radius: 20px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(210, 180, 160, 0.2);
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #a88a6f, #c9a878);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #7a7a7a;
+      line-height: 1.8;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/10;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-item .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      font-size: 0.95em;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .feature-card {
+      background: rgba(255, 250, 245, 0.7);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(220, 200, 180, 0.3);
+      box-shadow: 0 8px 20px rgba(180, 160, 140, 0.1);
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(180, 160, 140, 0.15);
+    }
+    .feature-card .icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+    .feature-card h3 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: #a88a6f;
+    }
+    .feature-card p {
+      color: #7a7a7a;
+      line-height: 1.6;
+    }
+    @media (max-width: 640px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #a0a0a0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 票务信息 & 联系电话放上面 -->
+    <div class="top-section">
+      <h2>票务信息</h2>
+      <div class="price">150<span>元/张</span></div>
+      <p>含全程讲解，1.2米以下儿童免费</p>
+      <div class="contact">
+        <h3>联系电话</h3>
+        <div class="phone">xxxx</div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1>上海外滩游船</h1>
+      <p>畅游黄浦江，欣赏外滩万国建筑博览群与陆家嘴金融中心的璀璨夜景</p>
+    </div>
+
+    <!-- 图片画廊 - 40张上海外滩照片 双列布局 -->
+    <div class="gallery">
+      <div class="gallery-item"><img src="images/shanghai-bund/001.jpg" alt="外滩夜景" loading="lazy"><div class="caption">外滩璀璨夜景</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/002.jpg" alt="黄浦江" loading="lazy"><div class="caption">黄浦江畔风光</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/003.jpg" alt="外滩建筑" loading="lazy"><div class="caption">外滩万国建筑</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/004.jpg" alt="上海城市" loading="lazy"><div class="caption">上海城市风光</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/005.jpg" alt="陆家嘴" loading="lazy"><div class="caption">陆家嘴天际线</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/006.jpg" alt="外滩漫步" loading="lazy"><div class="caption">外滩漫步</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/007.jpg" alt="浦江两岸" loading="lazy"><div class="caption">浦江两岸</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/008.jpg" alt="外滩风情" loading="lazy"><div class="caption">外滩风情</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/009.jpg" alt="上海夜景" loading="lazy"><div class="caption">上海迷人夜色</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/010.jpg" alt="外滩建筑群" loading="lazy"><div class="caption">万国建筑博览</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/011.jpg" alt="黄浦江景" loading="lazy"><div class="caption">黄浦江景</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/012.jpg" alt="外滩日景" loading="lazy"><div class="caption">外滩日景</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/013.jpg" alt="上海天际线" loading="lazy"><div class="caption">上海天际线</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/014.jpg" alt="外滩细节" loading="lazy"><div class="caption">外滩建筑细节</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/015.jpg" alt="东方明珠" loading="lazy"><div class="caption">东方明珠</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/016.jpg" alt="外滩全景" loading="lazy"><div class="caption">外滩全景</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/017.jpg" alt="上海外滩" loading="lazy"><div class="caption">上海外滩</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/018.jpg" alt="外滩街景" loading="lazy"><div class="caption">外滩街景</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/019.jpg" alt="浦江夜色" loading="lazy"><div class="caption">浦江夜色</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/020.jpg" alt="外滩黄昏" loading="lazy"><div class="caption">外滩黄昏</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/021.jpg" alt="上海风光" loading="lazy"><div class="caption">上海城市风光</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/022.jpg" alt="外滩观光" loading="lazy"><div class="caption">外滩观光</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/023.jpg" alt="黄浦江畔" loading="lazy"><div class="caption">黄浦江畔</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/024.jpg" alt="外滩历史建筑" loading="lazy"><div class="caption">历史建筑</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/025.jpg" alt="上海夜景璀璨" loading="lazy"><div class="caption">夜景璀璨</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/026.jpg" alt="外滩游船" loading="lazy"><div class="caption">外滩游船</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/027.jpg" alt="陆家嘴全景" loading="lazy"><div class="caption">陆家嘴全景</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/028.jpg" alt="外滩白昼" loading="lazy"><div class="caption">外滩白昼</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/029.jpg" alt="上海摩天楼" loading="lazy"><div class="caption">摩天楼群</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/030.jpg" alt="外滩广场" loading="lazy"><div class="caption">外滩广场</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/031.jpg" alt="浦江游览" loading="lazy"><div class="caption">浦江游览</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/032.jpg" alt="外滩夜景灯光" loading="lazy"><div class="caption">灯光璀璨</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/033.jpg" alt="上海地标" loading="lazy"><div class="caption">上海地标</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/034.jpg" alt="外滩假日" loading="lazy"><div class="caption">外滩假日</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/035.jpg" alt="上海之窗" loading="lazy"><div class="caption">上海之窗</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/036.jpg" alt="外滩黄昏景" loading="lazy"><div class="caption">黄昏美景</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/037.jpg" alt="上海印象" loading="lazy"><div class="caption">上海印象</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/038.jpg" alt="外滩观光客" loading="lazy"><div class="caption">外滩时光</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/039.jpg" alt="上海之夜" loading="lazy"><div class="caption">上海之夜</div></div>
+      <div class="gallery-item"><img src="images/shanghai-bund/040.jpg" alt="魅力外滩" loading="lazy"><div class="caption">魅力外滩</div></div>
+    </div>
+
+    <div class="features">
+      <div class="feature-card">
+        <div class="icon">🌆</div>
+        <h3>绝美夜景</h3>
+        <p>途经外滩、陆家嘴，打卡东方明珠、金茂大厦、环球金融中心</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">⛵</div>
+        <h3>豪华游轮</h3>
+        <p>顶级游轮配置，舒适座椅360度观景，室内外多层次空间</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📸</div>
+        <h3>拍照打卡</h3>
+        <p>最佳取景位置，记录上海魅力时刻，留下珍贵回忆</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>上海外滩游船 · 期待您的到来</p>
+    </div>
+  </div>
+</body>
+</html>
